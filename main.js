@@ -1,11 +1,14 @@
-import { Actor } from 'apify';
+import { Actor, launchPuppeteer } from 'apify';
 
 await Actor.init();
 
 const input = await Actor.getInput();
 const { startUrl = "https://www.linkedin.com/search/results/people/?keywords=recruiter&origin=GLOBAL_SEARCH_HEADER&geoUrn=%5B%22102113901%22%5D" } = input;
 
-const browser = await Actor.launchPuppeteer({ headless: true });
+import { launchPuppeteer } from 'apify';
+
+const browser = await launchPuppeteer({ headless: true });
+
 const page = await browser.newPage();
 
 await page.goto(startUrl, { waitUntil: 'networkidle2' });
