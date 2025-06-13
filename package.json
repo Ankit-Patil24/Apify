@@ -2,6 +2,7 @@
   "name": "linkedin-scraper-actor",
   "version": "1.0.0",
   "description": "Apify actor to scrape LinkedIn search results",
+  "type": "module",
   "dependencies": {
     "apify": "^3.0.0"
   },
