@@ -3,7 +3,7 @@ import { Actor } from 'apify';
 await Actor.init();
 
 const input = await Actor.getInput();
-const { startUrl } = input;
+const { startUrl = "https://www.linkedin.com/search/results/people/?keywords=recruiter&origin=GLOBAL_SEARCH_HEADER&geoUrn=%5B%22102113901%22%5D" } = input;
 
 const browser = await Actor.launchPuppeteer({ headless: true });
 const page = await browser.newPage();
@@ -33,7 +33,7 @@ for (let pageNum = 0; pageNum < 3; pageNum++) {
     if (!nextBtn) break;
 
     await nextBtn.click();
-    await page.waitForTimeout(4000); // wait to load next page
+    await page.waitForTimeout(4000);
 }
 
 for (const profile of results) {
