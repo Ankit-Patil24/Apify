@@ -1,4 +1,4 @@
-import { Actor, launchPuppeteer } from 'apify';
+import { Actor } from 'apify';
 
 await Actor.init();
 
