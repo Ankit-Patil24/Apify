@@ -1,0 +1,11 @@
+{
+  "name": "linkedin-scraper-actor",
+  "version": "1.0.0",
+  "description": "Apify actor to scrape LinkedIn search results",
+  "dependencies": {
+    "apify": "^3.0.0"
+  },
+  "scripts": {
+    "start": "node main.js"
+  }
+}

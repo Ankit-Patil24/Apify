@@ -1,0 +1,13 @@
+{
+  "name": "linkedin-scraper-actor",
+  "version": "1.0",
+  "buildTag": "latest",
+  "env": {
+    "APIFY_MEMORY_MBYTES": 1024
+  },
+  "meta": {
+    "title": "LinkedIn Scraper",
+    "description": "Scrapes first name, last name, title, company, and city from LinkedIn search results (first 3 pages)",
+    "author": "Ankit Patil"
+  }
+}
